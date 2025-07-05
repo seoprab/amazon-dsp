@@ -1,0 +1,31 @@
+/* Performance optimizations and utilities */
+
+/* GPU acceleration for animations */
+.gpu-accelerated{transform:translateZ(0);will-change:transform}
+
+/* Optimize font loading */
+@font-face{font-family:"Inter";font-display:swap;src:url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap")}
+
+/* Reduce layout thrashing */
+.no-layout-shift{contain:layout style paint}
+
+/* Optimize images */
+img{max-width:100%;height:auto;loading:lazy;decoding:async}
+
+/* Reduce paint complexity */
+.simple-paint{will-change:auto;transform:translateZ(0)}
+
+/* Optimize scrolling */
+.smooth-scroll{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+
+/* Critical resource hints */
+.preload-font{font-display:swap}
+
+/* Minimize reflows */
+.fixed-dimensions{width:100%;height:auto}
+
+/* Optimize transitions */
+.optimized-transition{transition:transform .3s cubic-bezier(.4,0,.2,1),opacity .3s cubic-bezier(.4,0,.2,1)}
+
+/* Reduce composite layers */
+.composite-layer{transform:translateZ(0);backface-visibility:hidden}
