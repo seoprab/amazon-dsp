@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link rel="stylesheet" href="css/dwao-footer.css" />
-    <link rel="stylesheet" href="css/tailwind-styles.css" />
-
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://dwao.in">
+    
+    <!-- Critical CSS inlined for immediate rendering -->
     <style>
-      .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-      }
-      .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
+      /* Critical above-the-fold styles */
+      *{box-sizing:border-box;margin:0;padding:0}
+      html{font-size:16px;line-height:1.5}
+      body{font-family:"Inter",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+      .container-1{max-width:1200px;width:90%;margin:0 auto}
+      footer{background:#000;color:#fff;width:100%;padding:5rem 0}
+      .logo{font-weight:600;font-size:28px;line-height:1;color:#000}
+      
+      /* Header critical styles */
+      #header{background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);padding:1rem 1.5rem;position:fixed;width:100%;z-index:50}
+      .container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+      
+      /* Hero section critical styles */
+      #hero{padding-top:8rem;padding-bottom:5rem;background:linear-gradient(to right,#4A69BB,#6283E5);color:#fff}
+      
+      /* Hide non-critical content initially */
+      .non-critical{opacity:0;transition:opacity 0.3s ease}
+      .loaded .non-critical{opacity:1}
+      
+      /* Optimize scrollbar */
+      .scrollbar-hide::-webkit-scrollbar{display:none}
+      .scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
     </style>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Load non-critical CSS asynchronously -->
+    <link rel="preload" href="css/dwao-footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/dwao-footer.css"></noscript>
+    
+    <link rel="preload" href="css/tailwind-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/tailwind-styles.css"></noscript>
+
     <title>Amazon DSP Account, ADSP Agency, Company, Services</title>
-      <script type="application/ld+json">
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -62,7 +95,7 @@
       "name": "What is Amazon DSP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Amazon DSP (Demand-Side Platform) is a tool that lets you run display, video, and audio ads across Amazon and thousands of other websites—using Amazon’s unique shopper data to target the right people."
+        "text": "Amazon DSP (Demand-Side Platform) is a tool that lets you run display, video, and audio ads across Amazon and thousands of other websites—using Amazon's unique shopper data to target the right people."
       }
     },
     {
@@ -70,7 +103,7 @@
       "name": "Do I need to be selling on Amazon to use it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not at all! You don’t need to sell on Amazon to advertise through DSP. It works great for both Amazon sellers and brands that sell elsewhere but want access to Amazon’s powerful audience targeting."
+        "text": "Not at all! You don't need to sell on Amazon to advertise through DSP. It works great for both Amazon sellers and brands that sell elsewhere but want access to Amazon's powerful audience targeting."
       }
     },
     {
@@ -102,7 +135,7 @@
       "name": "Can I retarget people who visited my product or website?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely! You can re-engage people who visited your product page, added something to their cart, or even browsed your brand—but didn’t convert."
+        "text": "Absolutely! You can re-engage people who visited your product page, added something to their cart, or even browsed your brand—but didn't convert."
       }
     },
     {
@@ -110,7 +143,7 @@
       "name": "Will I be able to see how well the ads are performing?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—you’ll get access to detailed reports that show clicks, impressions, and more importantly, what’s driving real sales and return on ad spend (ROAS)."
+        "text": "Yes—you'll get access to detailed reports that show clicks, impressions, and more importantly, what's driving real sales and return on ad spend (ROAS)."
       }
     },
     {
@@ -134,7 +167,7 @@
       "name": "Who can I target with Amazon DSP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can get super specific—targeting shoppers who viewed certain products, bought from your competitors, or showed interest in similar categories. It’s all powered by Amazon’s real customer data."
+        "text": "You can get super specific—targeting shoppers who viewed certain products, bought from your competitors, or showed interest in similar categories. It's all powered by Amazon's real customer data."
       }
     }
   ]
@@ -147,7 +180,6 @@
       <div class="container mx-auto flex items-center justify-between">
         <!-- Logo -->
         <span class="flex items-center cursor-pointer logo">
-          <!-- <img src="./images/dd.png" alt="DWAO Logo" class="h-12" /> -->
            DWAO
         </span>
 
@@ -237,7 +269,6 @@
           >
 
           <!-- Services Section -->
-          <!-- Services Button -->
           <button
             id="toggle-services"
             class="w-full text-left text-gray-800 font-medium hover:text-blue-600 focus:outline-none flex justify-between items-center"
@@ -320,7 +351,6 @@
           >
           <span
             class="block bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 "
-            
             >Get Started</span
           >
         </nav>
@@ -358,22 +388,17 @@
                 Trusted by leading brands
               </p>
               <div class="flex flex-wrap items-center gap-8">
-                <!-- <div class="bg-white/10 p-3 rounded-lg">
-                  <!-- <i class="fa-brands fa-google text-white text-3xl"></i> 
-                   <img src="./images/dominoz-logo.png" alt="Google Logo" class="h-8" loading="lazy" />
-                </div>-->
                 <div class="bg-white/10 p-3 rounded-lg">
-                  <img src="./images/apollo247-logo.png" alt="Google Logo" class="h-8" loading="lazy" />
+                  <img src="./images/apollo247-logo.png" alt="Apollo247 Logo" class="h-8" loading="lazy" width="auto" height="32" />
                 </div>
                 <div class="bg-white/10 p-3 rounded-lg">
-                  
-                  <img src="./images/olx%20logo.png" alt="Google Logo" class="h-8" loading="lazy" />
+                  <img src="./images/olx%20logo.png" alt="OLX Logo" class="h-8" loading="lazy" width="auto" height="32" />
                 </div>
                 <div class="bg-white/10 p-3 rounded-lg">
-                <img src="./images/zs-logo.png" alt="Google Logo" class="h-8" loading="lazy" />
+                <img src="./images/zs-logo.png" alt="ZS Logo" class="h-8" loading="lazy" width="auto" height="32" />
                 </div>
                 <div class="bg-white/10 p-4 rounded-lg">
-                  <img src="./images/pb-logo.png" alt="DV360 Logo" class="h-8" loading="lazy" />
+                  <img src="./images/pb-logo.png" alt="PB Logo" class="h-8" loading="lazy" width="auto" height="32" />
                 </div>
               </div>
             </div>
@@ -454,6 +479,8 @@
       </div>
     </section>
 
+    <!-- Below-the-fold content with lazy loading -->
+    <div class="non-critical">
     <!-- What is DV360 Section -->
     <section id="what-is-dv360" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
@@ -462,7 +489,7 @@
             What is Amazon DSP?
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Amazon DSP lets brands programmatically reach audiences across Amazon and third-party sites using Amazon’s powerful shopper data.
+            Amazon DSP lets brands programmatically reach audiences across Amazon and third-party sites using Amazon's powerful shopper data.
           </p>
         </div>
 
@@ -477,7 +504,7 @@
               Target the Right People, at the Right Time
             </h3>
             <p class="text-gray-600">
-              With Amazon’s powerful shopper data, you can reach people based on what they browse, buy, and search—making your ads more relevant and effective.
+              With Amazon's powerful shopper data, you can reach people based on what they browse, buy, and search—making your ads more relevant and effective.
             </p>
           </div>
 
@@ -507,7 +534,7 @@
               Reach People on Any Device
             </h3>
             <p class="text-gray-600">
-              Whether someone’s on their phone, laptop, or smart TV, Amazon DSP helps you deliver a seamless ad experience across all screens.
+              Whether someone's on their phone, laptop, or smart TV, Amazon DSP helps you deliver a seamless ad experience across all screens.
             </p>
           </div>
 
@@ -529,7 +556,7 @@
             >
               <i class="fa-solid fa-shield-halved text-blue-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">See What’s Working (and What’s Not)</h3>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">See What's Working (and What's Not)</h3>
             <p class="text-gray-600">
               Get detailed reports that go beyond clicks. See how your ads impact actual shopping behavior and sales on Amazon.
             </p>
@@ -685,7 +712,7 @@
                     <i class="fa-solid fa-check text-green-500 mr-2"></i>
                     <span class="text-gray-700"
                       >Strategic planning and growth consultation</span>
-                  </li>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -723,7 +750,7 @@
               Direct Access to Amazon DSP
             </h3>
             <p class="text-gray-600 text-center">
-              We provide streamlined access to Amazon DSP without high minimum spends, helping brands of all sizes tap into Amazon’s premium programmatic ecosystem.
+              We provide streamlined access to Amazon DSP without high minimum spends, helping brands of all sizes tap into Amazon's premium programmatic ecosystem.
             </p>
           </div>
 
@@ -737,7 +764,7 @@
               Expert-Led Campaign Strategy
             </h3>
             <p class="text-gray-600 text-center">
-              Our certified team builds data-driven strategies that align with your business goals—whether it’s brand awareness, conversions, or retargeting.
+              Our certified team builds data-driven strategies that align with your business goals—whether it's brand awareness, conversions, or retargeting.
             </p>
           </div>
 
@@ -751,7 +778,7 @@
               Audience Targeting 
             </h3>
             <p class="text-gray-600 text-center">
-              Leverage Amazon’s rich first-party shopper data to reach high-intent audiences across Amazon-owned and third-party platforms.
+              Leverage Amazon's rich first-party shopper data to reach high-intent audiences across Amazon-owned and third-party platforms.
             </p>
           </div>
 
@@ -793,283 +820,12 @@
              Training & Ongoing Support
             </h3>
             <p class="text-gray-600 text-center">
-              We don’t just run your campaigns we empower your team with platform training and provide dedicated support to keep you ahead.
+              We don't just run your campaigns we empower your team with platform training and provide dedicated support to keep you ahead.
             </p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Why Us Section 
-    <section id="why-us" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we've helped businesses transform their digital
-            advertising
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-8 border-b border-gray-100">
-              <img
-                src="./images/airtel-logos.png"
-                alt="Client Logo"
-                class="h-12 mx-auto mb-6"
-              />
-              <div class="flex justify-center items-center mb-6">
-                <span class="text-5xl font-bold text-[#4A69BB]">156%</span>
-                <span class="text-lg ml-2 text-gray-600"
-                  >ROAS<br />Increase</span
-                >
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">
-                Global E-commerce Success
-              </h3>
-              <p class="text-gray-600 text-center mb-6">
-                Leading fashion retailer achieved remarkable growth through
-                targeted programmatic campaigns
-              </p>
-            </div>
-            <div class="p-6 bg-gray-50">
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i
-                      class="fa-solid fa-chart-line text-green-500 text-xl"
-                    ></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >42% Reduction</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >in acquisition costs</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i class="fa-solid fa-users text-blue-500 text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >2.1M+ Reach</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >new customers reached</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i
-                      class="fa-solid fa-shopping-cart text-purple-500 text-xl"
-                    ></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >89% Growth</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >conversion rate improvement</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="mt-6 text-center">
-                <span
-                  class="inline-flex items-center text-[#4A69BB] font-medium hover:text-blue-700 cursor-pointer"
-                >
-                  View Full Case Study
-                  <i class="fa-solid fa-arrow-right ml-2"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-8 border-b border-gray-100">
-              <img
-                src="./images/Croma.png"
-                alt="Client Logo"
-                class="h-12 mx-auto mb-6"
-              />
-              <div class="flex justify-center items-center mb-6">
-                <span class="text-5xl font-bold text-[#4A69BB]">300%</span>
-                <span class="text-lg ml-2 text-gray-600"
-                  >Lead<br />Generation</span
-                >
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">
-                B2B Tech Revolution
-              </h3>
-              <p class="text-gray-600 text-center mb-6">
-                SaaS platform transforms lead generation through advanced DV360
-                strategies
-              </p>
-            </div>
-            <div class="p-6 bg-gray-50">
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i class="fa-solid fa-bullseye text-green-500 text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >45% Lower CPL</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >cost per lead reduction</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i class="fa-solid fa-star text-blue-500 text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >85% Quality</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >lead quality improvement</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i
-                      class="fa-solid fa-handshake text-purple-500 text-xl"
-                    ></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >92% Satisfaction</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >client satisfaction rate</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="mt-6 text-center">
-                <span
-                  class="inline-flex items-center text-[#4A69BB] font-medium hover:text-blue-700 cursor-pointer"
-                >
-                  View Full Case Study
-                  <i class="fa-solid fa-arrow-right ml-2"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div class="p-8 border-b border-gray-100">
-              <img
-                src="./images//faballey-logos-idswWw8pmW.png"
-                alt="Client Logo"
-                class="h-12 mx-auto mb-6"
-              />
-              <div class="flex justify-center items-center mb-6">
-                <span class="text-5xl font-bold text-[#4A69BB]">200%</span>
-                <span class="text-lg ml-2 text-gray-600"
-                  >ROI<br />Improvement</span
-                >
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3 text-center">
-                Retail Chain Expansion
-              </h3>
-              <p class="text-gray-600 text-center mb-6">
-                National retail brand achieves unprecedented growth with
-                targeted DV360 campaigns
-              </p>
-            </div>
-            <div class="p-6 bg-gray-50">
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i class="fa-solid fa-store text-green-500 text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >125% Visits</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >store visit increase</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i class="fa-solid fa-chart-pie text-blue-500 text-xl"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >38% Growth</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >market share increase</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <div
-                    class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"
-                  >
-                    <i
-                      class="fa-solid fa-dollar-sign text-purple-500 text-xl"
-                    ></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-gray-900"
-                      >4.5x Revenue</span
-                    >
-                    <span class="text-sm text-gray-600"
-                      >revenue multiplication</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="mt-6 text-center">
-                <span
-                  class="inline-flex items-center text-[#4A69BB] font-medium hover:text-blue-700 cursor-pointer"
-                >
-                  View Full Case Study
-                  <i class="fa-solid fa-arrow-right ml-2"></i>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-12">
-          <span
-            class="inline-block bg-[#4A69BB] text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-medium cursor-pointer"
-          >
-            Explore More Success Stories
-          </span>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-white">
@@ -1096,6 +852,8 @@
                     alt="Client"
                     class="w-16 h-16 rounded-full mr-4"
                     loading="lazy"
+                    width="64"
+                    height="64"
                   />
                   <div>
                     <h4 class="font-bold text-gray-900">Yogin Vora</h4>
@@ -1123,6 +881,8 @@
                     alt="Client"
                     class="w-16 h-16 rounded-full mr-4"
                     loading="lazy"
+                    width="64"
+                    height="64"
                   />
                   <div>
                     <h4 class="font-bold text-gray-900">Vivek Bhardwaj</h4>
@@ -1150,6 +910,8 @@
                     alt="Client"
                     class="w-16 h-16 rounded-full mr-4"
                     loading="lazy"
+                    width="64"
+                    height="64"
                   />
                   <div>
                     <h4 class="font-bold text-gray-900">Himanshu Sirohi</h4>
@@ -1177,6 +939,8 @@
                     alt="Client"
                     class="w-16 h-16 rounded-full mr-4"
                     loading="lazy"
+                    width="64"
+                    height="64"
                   />
                   <div>
                     <h4 class="font-bold text-gray-900">Abhishek Singh</h4>
@@ -1222,8 +986,6 @@
       </div>
     </section>
 
-   
-
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-white">
       <div class="container mx-auto px-6">
@@ -1251,7 +1013,7 @@
             </button>
             <div class="p-6 bg-white hidden">
               <p class="text-gray-700">
-                Amazon DSP (Demand-Side Platform) is a tool that lets you run display, video, and even audio ads across Amazon and thousands of other websites—using Amazon’s unique shopper data to target the right people.
+                Amazon DSP (Demand-Side Platform) is a tool that lets you run display, video, and even audio ads across Amazon and thousands of other websites—using Amazon's unique shopper data to target the right people.
               </p>
             </div>
           </div>
@@ -1270,7 +1032,7 @@
             </button>
             <div class="p-6 bg-white hidden">
               <p class="text-gray-700">
-                Not at all! You don’t need to sell on Amazon to advertise through DSP. It works great for both Amazon sellers and brands that sell elsewhere but want access to Amazon’s powerful audience targeting.
+                Not at all! You don't need to sell on Amazon to advertise through DSP. It works great for both Amazon sellers and brands that sell elsewhere but want access to Amazon's powerful audience targeting.
               </p>
             </div>
           </div>
@@ -1346,7 +1108,7 @@
             </button>
             <div class="p-6 bg-white hidden">
               <p class="text-gray-700">
-                Absolutely! You can re-engage people who visited your product page, added something to their cart, or even browsed your brand—but didn’t convert.
+                Absolutely! You can re-engage people who visited your product page, added something to their cart, or even browsed your brand—but didn't convert.
               </p>
             </div>
           </div>
@@ -1365,7 +1127,7 @@
             </button>
             <div class="p-6 bg-white hidden">
               <p class="text-gray-700">
-                Yes—you’ll get access to detailed reports that show clicks, impressions, and more importantly, what’s driving real sales and return on ad spend (ROAS).
+                Yes—you'll get access to detailed reports that show clicks, impressions, and more importantly, what's driving real sales and return on ad spend (ROAS).
               </p>
             </div>
           </div>
@@ -1408,8 +1170,6 @@
             </div>
           </div>
             
-            
-            
           <div class="border border-gray-200 rounded-xl overflow-hidden">
             <button
               class="w-full bg-gray-50 p-6 flex justify-between items-center"
@@ -1424,7 +1184,7 @@
             </button>
             <div class="p-6 bg-white hidden">
               <p class="text-gray-700">
-               You can get super specific—targeting shoppers who viewed certain products, bought from your competitors, or showed interest in similar categories. It’s all powered by Amazon’s real customer data.
+               You can get super specific—targeting shoppers who viewed certain products, bought from your competitors, or showed interest in similar categories. It's all powered by Amazon's real customer data.
               </p>
             </div>
           </div>
@@ -1558,6 +1318,9 @@
             src="https://dwao.in/wp-content/uploads/2022/05/DWAO-Digital-Agency-Logo-01-1-300x57.png"
             alt="DWAO Logo"
             class="h-12"
+            loading="lazy"
+            width="auto"
+            height="48"
           />
         </span>
         <nav class="hidden lg:flex space-x-8">
@@ -1675,160 +1438,6 @@
     </header>
 
     <!-- Footer -->
-    <!-- <footer id="footer" class="bg-gray-900 text-white py-12">
-      <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <img
-              src="https://dwao.in/wp-content/uploads/2022/05/DWAO-Digital-Agency-Logo-01-1-300x57.png"
-              alt="DWAO Logo"
-              class="h-12 mb-6 brightness-200"
-            />
-            <p class="text-gray-400 mb-6">
-              Premium DV360 account services to transform your digital
-              advertising strategy.
-            </p>
-            <div class="flex space-x-4">
-              <span
-                class="text-gray-400 hover:text-white transition cursor-pointer"
-              >
-                <i class="fa-brands fa-facebook-f"></i>
-              </span>
-              <span
-                class="text-gray-400 hover:text-white transition cursor-pointer"
-              >
-                <i class="fa-brands fa-twitter"></i>
-              </span>
-              <span
-                class="text-gray-400 hover:text-white transition cursor-pointer"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </span>
-              <span
-                class="text-gray-400 hover:text-white transition cursor-pointer"
-              >
-                <i class="fa-brands fa-instagram"></i>
-              </span>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-6">Services</h4>
-            <ul class="space-y-3">
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >DV360 Account Setup</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >DV360 Training</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Campaign Management</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Reporting &amp; Analytics</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Technical Support</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-6">Company</h4>
-            <ul class="space-y-3">
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >About Us</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Our Team</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Careers</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Blog</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Contact</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-bold mb-6">Resources</h4>
-            <ul class="space-y-3">
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Knowledge Base</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Case Studies</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >FAQs</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Webinars</span
-                >
-              </li>
-              <li>
-                <span
-                  class="text-gray-400 hover:text-white transition cursor-pointer"
-                  >Privacy Policy</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="border-t border-gray-800 pt-8">
-          <p class="text-center text-gray-500">
-            © 2025 DWAO Digital Agency. All rights reserved.
-          </p>
-        </div>
-      </div>
-    </footer> -->
-
     <footer>
       <div class="container-1">
         <div class="footer-wrap">
@@ -1972,13 +1581,75 @@
         </div>
       </div>
     </footer>
+    </div>
 
+    <!-- Load JavaScript asynchronously -->
     <script>
+      // Critical JavaScript for immediate functionality
+      const toggleBtn = document.getElementById("mobile-menu-toggle");
+      const closeBtn = document.getElementById("mobile-menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const toggleServicesBtn = document.getElementById("toggle-services");
+      const servicesSubmenu = document.getElementById("services-submenu");
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+        });
+      }
+
+      if (toggleServicesBtn) {
+        toggleServicesBtn.addEventListener("click", () => {
+          servicesSubmenu.classList.toggle("hidden");
+        });
+      }
+
+      function pageMove(){
+        document.getElementById('hero').scrollIntoView();
+        const inputName = document.querySelector('.inputName');
+        if (inputName) inputName.focus();
+      }
+
+      function toggleFAQ(button) {
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector("i");
+
+        answer.classList.toggle("hidden");
+        icon.style.transform = answer.classList.contains("hidden")
+          ? "rotate(0deg)"
+          : "rotate(180deg)";
+      }
+
+      function scrollTestimonials(direction) {
+        const container = document.querySelector(".overflow-x-auto");
+        const scrollAmount = 400;
+        if (direction === "left") {
+          container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        } else {
+          container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }
+
+      // Form submission handling
+      const forms = document.querySelectorAll("#contact-form, #contact-form-cta");
+      forms.forEach((form) => {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you for your submission! Our team will contact you shortly.");
+          form.reset();
+        });
+      });
+
       // Smooth scrolling for anchor links
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
-
           const target = document.querySelector(this.getAttribute("href"));
           if (target) {
             window.scrollTo({
@@ -1989,360 +1660,144 @@
         });
       });
 
-      // Form submission handling
-      const forms = document.querySelectorAll(
-        "#contact-form, #contact-form-full"
-      );
-      forms.forEach((form) => {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          alert(
-            "Thank you for your submission! Our team will contact you shortly."
-          );
-          form.reset();
-        });
+      // Show non-critical content after page load
+      window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
       });
     </script>
 
+    <!-- Load external scripts asynchronously -->
+    <script async src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Tailwind config loaded after main script -->
     <script>
-      const toggleBtn = document.getElementById("mobile-menu-toggle");
-      const closeBtn = document.getElementById("mobile-menu-close");
-      const mobileMenu = document.getElementById("mobile-menu");
-      const toggleServicesBtn = document.getElementById("toggle-services");
-      const servicesSubmenu = document.getElementById("services-submenu");
-
-      toggleBtn.addEventListener("click", () => {
-        mobileMenu.classList.remove("translate-x-full");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        mobileMenu.classList.add("translate-x-full");
-      });
-
-      toggleServicesBtn.addEventListener("click", () => {
-        servicesSubmenu.classList.toggle("hidden");
-      });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-      window.FontAwesomeConfig = {
-        autoReplaceSvg: "nest", // Options: 'nest', 'remove', 'replace'
-      };
-    </script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              ...{
-                transparent: "transparent",
-                current: "currentColor",
-                black: "#000000",
-                white: "#ffffff",
-                gray: {
-                  50: "#f9fafb",
-                  100: "#f3f4f6",
-                  200: "#e5e7eb",
-                  300: "#d1d5db",
-                  400: "#9ca3af",
-                  500: "#6b7280",
-                  600: "#4b5563",
-                  700: "#374151",
-                  800: "#1f2937",
-                  900: "#111827",
-                },
-                red: {
-                  50: "#fef2f2",
-                  100: "#fee2e2",
-                  200: "#fecaca",
-                  300: "#fca5a5",
-                  400: "#f87171",
-                  500: "#ef4444",
-                  600: "#dc2626",
-                  700: "#b91c1c",
-                  800: "#991b1b",
-                  900: "#7f1d1d",
-                },
-                yellow: {
-                  50: "#fffbeb",
-                  100: "#fef3c7",
-                  200: "#fde68a",
-                  300: "#fcd34d",
-                  400: "#fbbf24",
-                  500: "#f59e0b",
-                  600: "#d97706",
-                  700: "#b45309",
-                  800: "#92400e",
-                  900: "#78350f",
-                },
-                green: {
-                  50: "#ecfdf5",
-                  100: "#d1fae5",
-                  200: "#a7f3d0",
-                  300: "#6ee7b7",
-                  400: "#34d399",
-                  500: "#10b981",
-                  600: "#059669",
-                  700: "#047857",
-                  800: "#065f46",
-                  900: "#064e3b",
-                },
-                blue: {
-                  50: "#eff6ff",
-                  100: "#dbeafe",
-                  200: "#bfdbfe",
-                  300: "#93c5fd",
-                  400: "#60a5fa",
-                  500: "#3b82f6",
-                  600: "#2563eb",
-                  700: "#1d4ed8",
-                  800: "#1e40af",
-                  900: "#1e3a8a",
-                },
-                indigo: {
-                  50: "#eef2ff",
-                  100: "#e0e7ff",
-                  200: "#c7d2fe",
-                  300: "#a5b4fc",
-                  400: "#818cf8",
-                  500: "#6366f1",
-                  600: "#4f46e5",
-                  700: "#4338ca",
-                  800: "#3730a3",
-                  900: "#312e81",
-                },
-                purple: {
-                  50: "#f5f3ff",
-                  100: "#ede9fe",
-                  200: "#ddd6fe",
-                  300: "#c4b5fd",
-                  400: "#a78bfa",
-                  500: "#8b5cf6",
-                  600: "#7c3aed",
-                  700: "#6d28d9",
-                  800: "#5b21b6",
-                  900: "#4c1d95",
-                },
-                pink: {
-                  50: "#fdf2f8",
-                  100: "#fce7f3",
-                  200: "#fbcfe8",
-                  300: "#f9a8d4",
-                  400: "#f472b6",
-                  500: "#ec4899",
-                  600: "#db2777",
-                  700: "#be185d",
-                  800: "#9d174d",
-                  900: "#831843",
-                },
-              },
-              ...{
-                primary: {
-                  50: "var(--color-primary-50)",
-                  100: "var(--color-primary-100)",
-                  200: "var(--color-primary-200)",
-                  300: "var(--color-primary-300)",
-                  400: "var(--color-primary-400)",
-                  500: "var(--color-primary-500)",
-                  600: "var(--color-primary-600)",
-                  700: "var(--color-primary-700)",
-                  800: "var(--color-primary-800)",
-                  900: "var(--color-primary-900)",
-                  DEFAULT: "var(--color-primary)",
-                  focus: "var(--color-primary-focus)",
-                  content: "var(--color-primary-content)",
-                },
-                secondary: {
-                  50: "var(--color-secondary-50)",
-                  100: "var(--color-secondary-100)",
-                  200: "var(--color-secondary-200)",
-                  300: "var(--color-secondary-300)",
-                  400: "var(--color-secondary-400)",
-                  500: "var(--color-secondary-500)",
-                  600: "var(--color-secondary-600)",
-                  700: "var(--color-secondary-700)",
-                  800: "var(--color-secondary-800)",
-                  900: "var(--color-secondary-900)",
-                  DEFAULT: "var(--color-secondary)",
-                  focus: "var(--color-secondary-focus)",
-                  content: "var(--color-secondary-content)",
-                },
-                accent: {
-                  50: "var(--color-accent-50)",
-                  100: "var(--color-accent-100)",
-                  200: "var(--color-accent-200)",
-                  300: "var(--color-accent-300)",
-                  400: "var(--color-accent-400)",
-                  500: "var(--color-accent-500)",
-                  600: "var(--color-accent-600)",
-                  700: "var(--color-accent-700)",
-                  800: "var(--color-accent-800)",
-                  900: "var(--color-accent-900)",
-                  DEFAULT: "var(--color-accent)",
-                  focus: "var(--color-accent-focus)",
-                  content: "var(--color-accent-content)",
-                },
-                neutral: {
-                  50: "var(--color-neutral-50)",
-                  100: "var(--color-neutral-100)",
-                  200: "var(--color-neutral-200)",
-                  300: "var(--color-neutral-300)",
-                  400: "var(--color-neutral-400)",
-                  500: "var(--color-neutral-500)",
-                  600: "var(--color-neutral-600)",
-                  700: "var(--color-neutral-700)",
-                  800: "var(--color-neutral-800)",
-                  900: "var(--color-neutral-900)",
-                  DEFAULT: "var(--color-neutral)",
-                  focus: "var(--color-neutral-focus)",
-                  content: "var(--color-neutral-content)",
-                },
-                info: {
-                  50: "var(--color-info-50)",
-                  100: "var(--color-info-100)",
-                  200: "var(--color-info-200)",
-                  300: "var(--color-info-300)",
-                  400: "var(--color-info-400)",
-                  500: "var(--color-info-500)",
-                  600: "var(--color-info-600)",
-                  700: "var(--color-info-700)",
-                  800: "var(--color-info-800)",
-                  900: "var(--color-info-900)",
-                  DEFAULT: "var(--color-info)",
-                  focus: "var(--color-info-focus)",
-                  content: "var(--color-info-content)",
-                },
-                success: {
-                  50: "var(--color-success-50)",
-                  100: "var(--color-success-100)",
-                  200: "var(--color-success-200)",
-                  300: "var(--color-success-300)",
-                  400: "var(--color-success-400)",
-                  500: "var(--color-success-500)",
-                  600: "var(--color-success-600)",
-                  700: "var(--color-success-700)",
-                  800: "var(--color-success-800)",
-                  900: "var(--color-success-900)",
-                  DEFAULT: "var(--color-success)",
-                  focus: "var(--color-success-focus)",
-                  content: "var(--color-success-content)",
-                },
-                warning: {
-                  50: "var(--color-warning-50)",
-                  100: "var(--color-warning-100)",
-                  200: "var(--color-warning-200)",
-                  300: "var(--color-warning-300)",
-                  400: "var(--color-warning-400)",
-                  500: "var(--color-warning-500)",
-                  600: "var(--color-warning-600)",
-                  700: "var(--color-warning-700)",
-                  800: "var(--color-warning-800)",
-                  900: "var(--color-warning-900)",
-                  DEFAULT: "var(--color-warning)",
-                  focus: "var(--color-warning-focus)",
-                  content: "var(--color-warning-content)",
-                },
-                error: {
-                  50: "var(--color-error-50)",
-                  100: "var(--color-error-100)",
-                  200: "var(--color-error-200)",
-                  300: "var(--color-error-300)",
-                  400: "var(--color-error-400)",
-                  500: "var(--color-error-500)",
-                  600: "var(--color-error-600)",
-                  700: "var(--color-error-700)",
-                  800: "var(--color-error-800)",
-                  900: "var(--color-error-900)",
-                  DEFAULT: "var(--color-error)",
-                  focus: "var(--color-error-focus)",
-                  content: "var(--color-error-content)",
-                },
-                danger: {
-                  50: "var(--color-error-50)",
-                  100: "var(--color-error-100)",
-                  200: "var(--color-error-200)",
-                  300: "var(--color-error-300)",
-                  400: "var(--color-error-400)",
-                  500: "var(--color-error-500)",
-                  600: "var(--color-error-600)",
-                  700: "var(--color-error-700)",
-                  800: "var(--color-error-800)",
-                  900: "var(--color-error-900)",
-                  DEFAULT: "var(--color-error)",
-                  focus: "var(--color-error-focus)",
-                  content: "var(--color-error-content)",
-                },
-                failure: {
-                  50: "var(--color-error-50)",
-                  100: "var(--color-error-100)",
-                  200: "var(--color-error-200)",
-                  300: "var(--color-error-300)",
-                  400: "var(--color-error-400)",
-                  500: "var(--color-error-500)",
-                  600: "var(--color-error-600)",
-                  700: "var(--color-error-700)",
-                  800: "var(--color-error-800)",
-                  900: "var(--color-error-900)",
-                  DEFAULT: "var(--color-error)",
-                  focus: "var(--color-error-focus)",
-                  content: "var(--color-error-content)",
+      // Defer Tailwind config until after library loads
+      function initTailwind() {
+        if (typeof tailwind !== 'undefined') {
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  transparent: "transparent",
+                  current: "currentColor",
+                  black: "#000000",
+                  white: "#ffffff",
+                  gray: {
+                    50: "#f9fafb",
+                    100: "#f3f4f6",
+                    200: "#e5e7eb",
+                    300: "#d1d5db",
+                    400: "#9ca3af",
+                    500: "#6b7280",
+                    600: "#4b5563",
+                    700: "#374151",
+                    800: "#1f2937",
+                    900: "#111827",
+                  },
+                  red: {
+                    50: "#fef2f2",
+                    100: "#fee2e2",
+                    200: "#fecaca",
+                    300: "#fca5a5",
+                    400: "#f87171",
+                    500: "#ef4444",
+                    600: "#dc2626",
+                    700: "#b91c1c",
+                    800: "#991b1b",
+                    900: "#7f1d1d",
+                  },
+                  yellow: {
+                    50: "#fffbeb",
+                    100: "#fef3c7",
+                    200: "#fde68a",
+                    300: "#fcd34d",
+                    400: "#fbbf24",
+                    500: "#f59e0b",
+                    600: "#d97706",
+                    700: "#b45309",
+                    800: "#92400e",
+                    900: "#78350f",
+                  },
+                  green: {
+                    50: "#ecfdf5",
+                    100: "#d1fae5",
+                    200: "#a7f3d0",
+                    300: "#6ee7b7",
+                    400: "#34d399",
+                    500: "#10b981",
+                    600: "#059669",
+                    700: "#047857",
+                    800: "#065f46",
+                    900: "#064e3b",
+                  },
+                  blue: {
+                    50: "#eff6ff",
+                    100: "#dbeafe",
+                    200: "#bfdbfe",
+                    300: "#93c5fd",
+                    400: "#60a5fa",
+                    500: "#3b82f6",
+                    600: "#2563eb",
+                    700: "#1d4ed8",
+                    800: "#1e40af",
+                    900: "#1e3a8a",
+                  },
+                  indigo: {
+                    50: "#eef2ff",
+                    100: "#e0e7ff",
+                    200: "#c7d2fe",
+                    300: "#a5b4fc",
+                    400: "#818cf8",
+                    500: "#6366f1",
+                    600: "#4f46e5",
+                    700: "#4338ca",
+                    800: "#3730a3",
+                    900: "#312e81",
+                  },
+                  purple: {
+                    50: "#f5f3ff",
+                    100: "#ede9fe",
+                    200: "#ddd6fe",
+                    300: "#c4b5fd",
+                    400: "#a78bfa",
+                    500: "#8b5cf6",
+                    600: "#7c3aed",
+                    700: "#6d28d9",
+                    800: "#5b21b6",
+                    900: "#4c1d95",
+                  },
+                  pink: {
+                    50: "#fdf2f8",
+                    100: "#fce7f3",
+                    200: "#fbcfe8",
+                    300: "#f9a8d4",
+                    400: "#f472b6",
+                    500: "#ec4899",
+                    600: "#db2777",
+                    700: "#be185d",
+                    800: "#9d174d",
+                    900: "#831843",
+                  },
                 },
               },
             },
-          },
-        },
-        variants: {
-          extend: {
-            backgroundColor: ["active", "group-hover"],
-            textColor: ["active", "group-hover"],
-          },
-        },
-        plugins: [],
-      };
-    </script>
-    <script>
-      function toggleFAQ(button) {
-        const answer = button.nextElementSibling;
-        const icon = button.querySelector("i");
-
-        answer.classList.toggle("hidden");
-        icon.style.transform = answer.classList.contains("hidden")
-          ? "rotate(0deg)"
-          : "rotate(180deg)";
-      }
-    </script>
-
-    <script>
-      function scrollTestimonials(direction) {
-        const container = document.querySelector(".overflow-x-auto");
-        const scrollAmount = 400;
-        if (direction === "left") {
-          container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+            variants: {
+              extend: {
+                backgroundColor: ["active", "group-hover"],
+                textColor: ["active", "group-hover"],
+              },
+            },
+            plugins: [],
+          };
         } else {
-          container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          setTimeout(initTailwind, 100);
         }
       }
-    </script>
-
-    <script>
-
-    
-
-      function pageMove(){
-        document.getElementById('hero').scrollIntoView();
-        document.querySelector('.inputName').focus();
-      }
-
-
+      
+      // Initialize after a short delay to ensure library is loaded
+      setTimeout(initTailwind, 500);
     </script>
   </body>
 </html>
