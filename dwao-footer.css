@@ -1,0 +1,291 @@
+.container-1 {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.careers .testimonial-wrap .slider-container .slides .left .social ul, .filter-cont ul, .home-nav ul, .readers-tools ul, footer .footer-btm .left ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+ footer .footer-btm .left, footer .footer-btm .right {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 5rem 0;
+    background: #000;
+}
+
+.blog-container, .contact-us-wrap, .inner-section .who-we-are, .our-prev-work, footer .footer-wrap {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .footer-wrap .left {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-wrap .left .logo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 5.25rem;
+    color: #fff;
+    line-height: 1;
+    position: static;
+    font-weight: 700;
+}
+
+footer .footer-wrap .left .office-address {
+    font-size: 15px;
+    color: #8b8b8b;
+    line-height: normal;
+    padding: 2rem 0;
+}
+
+footer .footer-wrap .left .subscribe {
+    width: 100%;
+    margin: 4rem 0 0;
+    padding: 0;
+}
+
+footer .footer-wrap .left .subscribe h6 {
+    color: #8b8b8b;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.fieldInput {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid #8b8b8b;
+}
+
+.fieldInput .form-input {
+    width: 80%;
+    background: 0 0;
+    border: none;
+    padding: 8px 0;
+    font-size: 15px;
+    color: #8b8b8b;
+}
+
+.fieldInput .form-input::placeholder {
+    font-size: 15px;
+    list-style: outside;
+}
+
+.fieldInput .form-submit {
+    font-size: 15px;
+    color: #8b8b8b;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 35px;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+}
+
+footer .footer-wrap .right {
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .footer-wrap .right ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-wrap .right ul:nth-child(2) {
+    margin: 0 10%;
+}
+
+footer .footer-wrap .right ul li {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 15px;
+    color: #8b8b8b;
+}
+
+footer .footer-wrap .right ul li a {
+    color: #8b8b8b;
+    transition: 0.3s;
+}
+
+footer .footer-btm .left ul li a:hover, footer .footer-btm .right ul li a:hover, footer .footer-wrap .right ul li a:hover {
+    color: #fff;
+}
+
+footer .footer-wrap .right ul li a span {
+    color: #fff;
+}
+
+footer .footer-btm {
+    width: 100%;
+    margin: 3rem 0 0;
+    padding: 1rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #8b8b8b;
+}
+
+footer .footer-btm .left ul li {
+    margin: 0.2rem 1rem 0.2rem 0;
+    padding: 0 1rem 0 0;
+    border-right: 1px solid #8b8b8b;
+}
+
+footer .footer-btm .left ul li:last-child {
+    border: none;
+}
+
+footer .footer-btm .left ul li a {
+    color: #8b8b8b;
+    font-size: 15px;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+footer .footer-btm .right ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .footer-btm .right ul li {
+    margin: 0.2rem 0 0.2rem 1rem;
+    padding: 0;
+}
+
+footer .footer-btm .right ul li a {
+    color: #8b8b8b;
+    font-size: 22px;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+     footer .footer-wrap .left .subscribe h6 br, header.active .home-nav {
+        display: none;
+    }
+
+    
+
+     footer .footer-btm .left, footer .footer-btm .right, footer .footer-wrap .left, nav {
+        width: 100%;
+    }
+
+  
+
+     footer .footer-wrap {
+        flex-direction: column;
+    }
+
+   
+
+
+    .join-our-team .left h5, footer .footer-wrap .left .logo {
+        font-size: 29px;
+    }
+
+    .clients h3, .inner-section .great-place-to-work h3, .inner-section .whats-new .right .thumb .bottom h3 {
+        font-size: 1.2rem;
+    }
+
+    footer .footer-wrap .left .office-address {
+        font-size: 14px;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    footer .footer-wrap .left .subscribe h6 {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    footer .footer-wrap .right {
+        width: 100%;
+        padding: 2rem 0;
+    }
+
+    footer .footer-wrap .right ul {
+        margin: 0 0.2rem;
+    }
+
+    footer .footer-wrap .right ul li {
+        padding: 0.2rem 0;
+        font-size: 14px;
+    }
+
+    footer .footer-btm .left ul, footer .footer-btm .right ul {
+        justify-content: center;
+    }
+
+    footer .footer-btm .left ul li {
+        margin: 0.2rem 0.25rem;
+        padding: 0 0.5rem 0 0;
+    }
+
+    footer .footer-btm .left ul li a {
+        font-size: 16px;
+    }
+
+    footer .footer-btm {
+        margin: 1rem 0 0;
+        flex-direction: column-reverse;
+    }
+
+
+  
+
+    footer .footer-wrap .left .subscribe {
+        margin: 1rem 0 0;
+    }
+
+}
+
+
+
+.logo{
+    z-index: 123;
+    padding: 10px 0;
+    color: #000000;
+    width: 10%;
+    font-weight: 600;
+    /* font-family: helveticaneuebold; */
+    font-size: 28px;
+    line-height: 1;
+}
